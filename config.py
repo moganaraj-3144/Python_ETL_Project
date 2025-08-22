@@ -12,4 +12,4 @@ POSTGRES = {
 
 
 # Folder containing CSV files
-CSV_FOLDER = os.getenv("CSV_FOLDER", "data")
+CSV_FOLDER = os.environ.get("CSV_FOLDER","/Users/mogana/myProjects/SQL_Data_Warehouse_Project/datasets/csv-files")

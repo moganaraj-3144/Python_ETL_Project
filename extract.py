@@ -16,6 +16,7 @@ def extract_files(files):
     files_to_process = []
     for f in files:
         filepath = os.path.join(CSV_FOLDER, f)
+        print(f"Checking: {filepath}")  # debug
         if os.path.exists(filepath):
             files_to_process.append(filepath)
         else:
@@ -25,5 +26,5 @@ def extract_files(files):
 
 def read_csv_files(filename):
     df = pd.read_csv(filename)
-    
+
     return df
