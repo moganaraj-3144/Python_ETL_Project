@@ -15,7 +15,7 @@ def transform(df: pd.DataFrame) -> pd.DataFrame:
     for col in numeric_cols:
         if col in df.columns:
             # Convert everything to string first, strip spaces
-            df[col] = df[col].astype(str).str.strip()
+            df[col] = df[col].astype(str).str.strip().str.lower() 
 
             # Replace strings like 'None', '', 'nan' with pd.NA
             df[col] = df[col].replace({'none': pd.NA, '': pd.NA, 'nan': pd.NA})

@@ -23,7 +23,7 @@ def run_etl():
             df = transform(df)
             print(f'Transformed {i}, {len(df)} records')
 
-            df = load(df, table_name)
+            load(df, table_name)
             print(f'Successfully loaded {i} into {table_name}')
 
         except Exception as e:
